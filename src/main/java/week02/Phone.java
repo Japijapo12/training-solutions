@@ -1,8 +1,14 @@
 package week02;
 
 public class Phone {
-    String type;
-    int mem;
+
+    private String type;
+    private int mem;
+
+    public Phone(String type, int mem) {
+        this.type = type;
+        this.mem = mem;
+    }
 
     public String getType() {
         return type;
@@ -20,8 +26,5 @@ public class Phone {
         this.mem = mem;
     }
 
-    public Phone(String type, int mem) {
-        this.type = type;
-        this.mem = mem;
-    }
+
 }

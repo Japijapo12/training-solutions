@@ -1,12 +1,28 @@
 package week02;
 
+import java.util.Scanner;
+
 public class PhoneMain {
     public static void main(String[] args) {
-        Phone phone1 = new Phone("Samsung", 4 );
-        Phone phone2 = new Phone("Nokia", 2 );
 
-        System.out.println(phone1.getType() +"" + phone1.getMem());
-        System.out.println(phone2.getType() +"" + phone2.getMem());
+        System.out.println("A első készülék típusa:");
+        Scanner scanner = new Scanner(System.in);
+        String phone1 = scanner.nextLine();
+
+        System.out.println("Hány Gigabájt a memóriája?");
+        int type1 = scanner.nextInt();
+
+        scanner.nextLine();
+
+        System.out.println("A második készülék típusa:");
+        String phone2 = scanner.nextLine();
+
+        System.out.println("Hány Gigabájt a memóriája?");
+        int type2 = scanner.nextInt();
+
+
+        System.out.println("Az első telefon: " + phone1 + (" ") + type1);
+        System.out.println("Az második telefon: " + phone2 + (" ") + type2);
 
 
     }
