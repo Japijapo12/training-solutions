@@ -45,9 +45,9 @@ public class BankAccount {
         balance = balance - amount;
     }
 
-
-
-
-
+    public void transfer(BankAccount to, int amount) {
+        withdraw(amount);
+        to.deposit(amount);
+    }
 
 }

@@ -14,9 +14,10 @@ public class Bank {
        // System.out.println("Másik bankszámla: " + account2.getOwner() + (" (") + account2.getAccountNumber() + "): " + account2.getBalance() );
 
        // Bekérve az adatokat:
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Számla tulajdonos:");
-        Scanner scanner = new Scanner(System.in);
+
         String owner = scanner.nextLine();
 
         System.out.println("Számlaszám:");
@@ -26,17 +27,27 @@ public class Bank {
         int amount = scanner.nextInt();
 
         BankAccount bankAccount = new BankAccount(account, owner, amount);
+        scanner.nextLine();
+        //másik bankszámla
+        System.out.println("Számla tulajdonos:");
+        String owner2 = scanner.nextLine();
+
+        System.out.println("Számlaszám:");
+        String account2 = scanner.nextLine();
+
+        System.out.println("Összeg:");
+        int amount2 = scanner.nextInt();
+
+        BankAccount bankAccount2 = new BankAccount(account2, owner2, amount2);
 
         bankAccount.setBalance(amount);
 
         System.out.println("Utalás " + owner + " számára: ");
-        int amount2 = scanner.nextInt();
+        int amount3 = scanner.nextInt();
 
         System.out.println("Az új egyenleg: ");
 
-        bankAccount.deposit(amount2);
-
-
+        bankAccount.deposit(amount3);
 
 
         System.out.println(bankAccount.getBalance());
