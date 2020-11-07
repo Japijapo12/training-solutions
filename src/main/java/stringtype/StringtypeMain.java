@@ -19,9 +19,10 @@ public class StringtypeMain {
 
         String empty1 = "";
         String empty2 = "";
+        String empty3 = empty1 + empty2
 
         System.out.println(empty1 + empty2);
-        System.out.println((empty1 + empty2).length());
+        System.out.println((empty3).length());
 
         String letters = "Abcde";
         System.out.println(letters.length());
