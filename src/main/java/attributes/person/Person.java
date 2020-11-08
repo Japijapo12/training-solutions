@@ -25,4 +25,9 @@ public class Person {
 
     }
 
+    public void correctData (String name, String identificationCard) {
+        this.name = name;
+        this.identificationCard = identificationCard;
+        }
+
 }
