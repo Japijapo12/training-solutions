@@ -2,8 +2,9 @@ package attributes.person;
 
 public class Person {
 
-    String name;
-    String identificationCard;
+    private String name;
+    private String identificationCard;
+    private Address address;
 
     public Person (String name, String identificationCard) {
         this.name = name;
@@ -25,9 +26,25 @@ public class Person {
 
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", identificationCard='" + identificationCard + '\'' +
+                '}';
+    }
+
     public void correctData (String name, String identificationCard) {
         this.name = name;
         this.identificationCard = identificationCard;
+        }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void moveTo(Address address) {
+        this.address = address;
         }
 
 }
