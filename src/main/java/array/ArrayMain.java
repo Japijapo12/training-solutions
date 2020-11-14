@@ -1,7 +1,5 @@
 package array;
 
-import java.sql.SQLOutput;
-
 public class ArrayMain {
     public static void main(String[] args) {
         String[] week = {"Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat", "Vasárnap"};
