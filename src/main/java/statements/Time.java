@@ -21,6 +21,18 @@ public class Time {
         return h + ":" + m + ":" + s;
     }
 
+    public int getInSeconds() {
+        int hourInseconds = getInMinutes() * 60 + s;
+        return hourInseconds;
+
+    }
+
+    public boolean earlierThen(Time other) {
+        int time1InSeconds = this.getInSeconds();
+        int time2InSeconds = other.getInSeconds();
+        return time1InSeconds > time2InSeconds;
+    }
+
 
 
 
