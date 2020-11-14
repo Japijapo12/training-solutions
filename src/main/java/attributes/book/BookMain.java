@@ -7,7 +7,7 @@ public class BookMain {
 
         System.out.println(book.getTitle());
 
-        book.setTitle("A dzsungel könyve");
+        book.setTitle("Gyűrük ura");
 
         System.out.println(book.getTitle());
     }
