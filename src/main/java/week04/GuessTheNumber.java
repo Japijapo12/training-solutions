@@ -19,7 +19,7 @@ public class GuessTheNumber {
             System.out.println("Írj be egy számot!");
             guess = Integer.parseInt(scanner.nextLine());
             numberOfGuesses ++;
-            System.out.println(numberOfGuesses + ". kérdés");
+            System.out.println(numberOfGuesses + ". kérdés. Maradt még " + (6 - numberOfGuesses) + " lehetőséged");
 
             if (guess < number) {
                 System.out.println(" A Gondolt szám nagyobb!");
