@@ -33,9 +33,4 @@ public class Product {
         }
     }
 
-
-    public static void main(String[] args) {
-        Product product = new Product(150, "HUF");
-        System.out.println(product.convertPrice("USD"));
-    }
 }
