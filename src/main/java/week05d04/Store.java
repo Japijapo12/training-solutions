@@ -8,18 +8,40 @@ public class Store {
 
     private List<Product> products = new ArrayList<>();
 
-    public void addProduct(Product product) {
-        products.add(product);
+    public Store(List<Product> products) {
+        this.products = products;
+    }
+
+    public boolean addProduct(Product product) {
+        if (!isValid(product)) {
+            return false;
+        } else {
+            products.add(product);
+            return true;
+        }
+    }
+
+    private boolean containsByName(Product product) {
+        for (Product item : products) {
+            if (item.getName().equals(product.getName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean isValid(Product product) {
+        return !containsByName(product) && !product.isExpired();
     }
 
     public int getNumberOfExpired() {
-        int number = 0;
+        int count = 0;
         for (Product product : products) {
-            if (product.getExpireDate().isBefore(LocalDate.now())) {
-                number++;
+            if (product.isExpired()) {
+                count++;
             }
         }
-        return number;
+        return count;
     }
 
 
