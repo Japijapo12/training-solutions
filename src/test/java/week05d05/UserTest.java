@@ -17,6 +17,7 @@ public class UserTest {
     @Test
     public void test() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            throw new IllegalArgumentException("Hibás emailcím");
 
         });
     }
