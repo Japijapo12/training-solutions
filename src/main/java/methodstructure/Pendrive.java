@@ -28,19 +28,32 @@ public class Pendrive {
         this.price = this.price + (this.price * percent);
     }
 
-    int comparePricePerCapacity(Pendrive pendrive) {
-        if (pendrive.price/pendrive.capaticy > pendrive.getPrice()/pendrive.getCapaticy()) {
+    private double pricePerCapacity() {
+        return price/capaticy;
+    }
+
+    int comparePricePerCapacity(Pendrive otherPendrive) {
+        if (pricePerCapacity() > otherPendrive.pricePerCapacity()) {
             return 1;
         }
-        if (pendrive.price/pendrive.capaticy < pendrive.getPrice()/pendrive.getCapaticy()) {
+        if (pricePerCapacity() < otherPendrive.pricePerCapacity()) {
             return -1;
         }
         return 0;
 
     }
 
-    boolean cheaperThan(Pendrive pendrive) {
-        return this.price < pendrive.price;
+    boolean cheaperThan(Pendrive otherPendrive) {
+        return this.price < otherPendrive.price;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Pendrive{" +
+                "name='" + name + '\'' +
+                ", capaticy=" + capaticy +
+                ", price=" + price +
+                '}';
     }
 }
