@@ -1,4 +1,4 @@
-package inheritanceconstructor;
+package inheritanceconstructor.cars;
 
 public class Car {
 
@@ -33,12 +33,12 @@ public class Car {
     }
 
     // csökkenti az üzemanyag mennyiségét, nem fogyhat ki! FuelRate = Mennyit fogyaszt 100km-en
-    public double drive(int km) {
+    public void drive(int km) {
         double restFuel = (fuel - (getFuelRate()/100) * km);
         if (restFuel <= 0) {
-            throw  new RuntimeException("Nincs elég benzin!");
+            throw  new RuntimeException("Not enough fuel available!");
         }
-    return restFuel;
+        fuel = restFuel;
     }
 
     //kiszámolja, mennyit lehet tankolni
