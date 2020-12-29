@@ -1,7 +1,5 @@
 package interfaces.simplethread;
 
-import interfaces.simplethread.Runnable;
-
 import java.util.List;
 
 public class SimpleThread implements Runnable {
@@ -20,6 +18,7 @@ public class SimpleThread implements Runnable {
         if (tasks !=null && !tasks.isEmpty()) {
             tasks.remove(tasks.size()-1);
         }
+        return false;
     }
 
     @Override
