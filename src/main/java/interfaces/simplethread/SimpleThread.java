@@ -1,4 +1,6 @@
-package interfaces;
+package interfaces.simplethread;
+
+import interfaces.simplethread.Runnable;
 
 import java.util.List;
 
