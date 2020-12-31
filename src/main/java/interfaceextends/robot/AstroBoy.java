@@ -1,12 +1,13 @@
 package interfaceextends.robot;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AstroBoy implements FlyableRobot {
 
     private Point position;
     private int angle;
-    private List<Point> path;
+    private List<Point> path = new ArrayList<>();
     public final static long ALTITUDE = 5;
 
     public AstroBoy(Point position) {
