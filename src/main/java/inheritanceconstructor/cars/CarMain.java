@@ -1,4 +1,4 @@
-package inheritanceconstructor;
+package inheritanceconstructor.cars;
 
 public class CarMain {
 
@@ -6,6 +6,6 @@ public class CarMain {
         Car car = new Car(10,40, 50);
 
         System.out.println(car.calculateRefillAmount());
-        System.out.println("Még ennyi benzined maradt: " + car.drive(20));
+
     }
 }
