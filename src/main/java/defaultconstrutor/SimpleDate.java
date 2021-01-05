@@ -6,6 +6,18 @@ public class SimpleDate {
     private int month;
     private int day;
 
+    public int getYear() {
+        return year;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
     public void setDate(int year, int month, int day) {
 
         if (!isCorrect(year, month, day)) {
