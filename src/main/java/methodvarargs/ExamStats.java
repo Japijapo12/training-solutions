@@ -12,7 +12,8 @@ public class ExamStats {
         this.maxPoints = maxPoints;
     }
 
-
+        // küszöbérték megadása százalékban
+        //kiszámítja a küszöbérték feletti eredmények számát
     public int getNumberOfTopGrades(int limitInPercent, int... results) {
 
         if (results == null || results.length == 0) {
@@ -28,7 +29,7 @@ public class ExamStats {
         return count;
     }
 
-
+        // alsó küszöbérték alatt: bukott-e meg valaki
     public boolean hasAnyFailed(int limitInPercent, int... results){
 
         if (results == null || results.length == 0) {
