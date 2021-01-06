@@ -6,6 +6,9 @@ public class Skill {
     private int level;
 
     public Skill(String name, int level) {
+       if (level < 1 || level >5) {
+           throw new IllegalArgumentException("A level csak 1 és 5 közötti érték lehet!");
+       }
         this.name = name;
         this.level = level;
     }
@@ -17,4 +20,6 @@ public class Skill {
     public int getLevel() {
         return level;
     }
+
+
 }
