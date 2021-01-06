@@ -13,8 +13,9 @@ public class ArraySelector {
 
 
             if (i % 2 == 0) {
-              str = (events[i] + ", ").toString();
+              str =  "[" + str + ( (events[i] + ", ").toString()) + "]";
             }
+
         }
         return str;
     }
