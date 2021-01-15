@@ -23,8 +23,8 @@ public class FilesSum {
     public int sumNumbers() {
         int sum = 0;
         for (int i = 0; i < 100; i++) {
-            String filename = "number" + (i < 10 ? "0" + i : i) + ".txt";
-             //String filename = String.format("number%02d.txt", i);
+            //String filename = "number" + (i < 10 ? "0" + i : i) + ".txt";
+             String filename = String.format("number%02d.txt", i);
 
             if (Files.isRegularFile(Path.of(filename))) {
                 int number = readFile(filename);
