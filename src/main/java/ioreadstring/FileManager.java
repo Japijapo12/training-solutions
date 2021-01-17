@@ -11,16 +11,15 @@ public class FileManager {
     private Path file;
     private List<Human> humans = new ArrayList<>();
 
-    public FileManager(String fileRelativePath) {
-        this.file = Path.of(fileRelativePath);
+    public FileManager(String filePath) {
+        this.file = Path.of(filePath);
     }
-
 
     public void readFromFile() {
 
         try {
-            List<String> fileInString = Files.readAllLines(file);
-            for (String s : fileInString) {
+            List<String> filePath = Files.readAllLines(file);
+            for (String s : filePath) {
                 String firstAndLast[] = s.split(" ");
                 Human human = new Human(firstAndLast[0], firstAndLast[1]);
                 humans.add(human);
@@ -37,5 +36,9 @@ public class FileManager {
 
     public List<Human> getHumans() {
         return new ArrayList<>(humans);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new FileManager("src/test/resources/human.txt").getHumans().get(0));
     }
 }
