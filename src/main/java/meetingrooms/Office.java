@@ -7,6 +7,16 @@ public class Office {
 
     public List<MeetingRoom> meetingRooms = new ArrayList<>();
 
+    public List<MeetingRoom> getMeetingRooms() {
+        return meetingRooms;
+    }
+
+    public void setMeetingRooms(List<MeetingRoom> meetingRooms) {
+        this.meetingRooms = meetingRooms;
+    }
+
+
+
     public void addMeetingRoom(MeetingRoom meetingRoom) {
         meetingRooms.add(meetingRoom);
 
@@ -18,6 +28,8 @@ public class Office {
         }
 
     }
+
+
 
    public void printNamesReverse() {
 
@@ -65,11 +77,5 @@ public class Office {
 
     }
 
-    public List<MeetingRoom> getMeetingRooms() {
-        return meetingRooms;
-    }
 
-    public void setMeetingRooms(List<MeetingRoom> meetingRooms) {
-        this.meetingRooms = meetingRooms;
-    }
 }
