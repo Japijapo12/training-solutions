@@ -86,3 +86,21 @@ public class FaultList {
 
 
 }
+
+//Egy felhasználóktól nyert adatokat kell feldolgozni és a hibás sorokról jelentést
+//készíteni. Az bemeneti adatok sorai tartalmazhatnak megjegyzésbe tett sorokat is, tehát
+//lehet benne adatsor és lehet megjegyzés sor.
+//Az adatsorok szerkezete: sorszám, mértérték, mérésdátum. Pl. 12, 34.5,
+//2014.05.22. A megjegyzésbe tett sorok ugyanúgy , karakterrel elválasztott három
+//részből állnak, csak az első rész nem alakítható számmá. Pl. M12, 12, 2014.01.01. A hiba
+//jelentés tartalmazzon bejegyzést minden olyan sorról, amely nem megjegyzésbe tett és
+//hiba van benne. A jelentés egy List<String> legyen, ahol a String tartalmazza a hibás
+//sor sorszámát és a hiba kódját, sorszam, hibakód alakban. Figyelem, a hibaüzenetben a
+//sorban szereplő sorszámot kell kiírni, és nem azt a számot (indexet), amelyik pozíción
+//szerepel az adott sor.
+//Hibakódok:
+//• 2: WORDCOUNT_ERROR, azaz a sor nem bontható 3 db , karakterrel elválaszható
+//részre.
+//• 4: VALUE_ERROR, azaz a második rész nem double szám.
+//• 8: DATE_ERROR, azaz a harmadik rész nem yyyy.MM.dd. alakú dátum
+//• 12: VALUE_AND_DATE_ERROR: azaz egyszerre van VALUE_ERROR és DATE_ERROR is.
