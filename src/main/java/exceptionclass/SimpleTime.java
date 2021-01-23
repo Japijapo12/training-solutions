@@ -6,8 +6,7 @@ public class SimpleTime {
     private int minute;
 
     public SimpleTime(int hour, int minute) {
-        this.hour = hour;
-        this.minute = minute;
+        set(hour, minute);
     }
 
     public int getHour() {
