@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class LongwordsTest {
 
     Longwords longwords = new Longwords();
@@ -21,7 +23,7 @@ public class LongwordsTest {
         String s = longwords.writeWithStringWriter(testWords);
         String[] testS = s.split("\n");
         assertEquals(3, testS.length);
-        assertEquals(true, testS[1].contains("34"));
+        assertTrue(testS[1].contains("34"));
     }
 
 }
