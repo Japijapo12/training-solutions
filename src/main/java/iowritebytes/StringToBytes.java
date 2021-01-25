@@ -22,3 +22,7 @@ public class StringToBytes {
         }
     }
 }
+
+//Hozz létre egy StringToBytes osztályt és készíts benne egy writeAsBytes() metódust!
+//A metódus a paraméterként kapott szöveg listából az "_" jellel kezdődő szövegeken kívül
+//minden mást kiír a szintén paraméterül kapott path-ra bináris fájlba.
