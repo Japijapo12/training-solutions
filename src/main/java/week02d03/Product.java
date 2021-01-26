@@ -18,16 +18,19 @@ public class Product {
         return code;
     }
 
-    public boolean areTheyEqual(String name) {
-        return this.name.equals(name);
+    public boolean areTheyEqual(Product product) {
+        return this.name.equals(product.getName());
     }
 
 
     public static void main(String[] args) {
         Product product = new Product("iPhoneSE", "123456");
+        Product product2 = new Product("iPhone", "123444");
+        Product product3 = new Product("iPhoneSE", "123444");
 
-        System.out.println(product.areTheyEqual("iPhone"));
-        System.out.println(product.areTheyEqual("iPhoneSE"));
+        System.out.println(product.areTheyEqual(product2));
+        System.out.println(product.areTheyEqual(product3));
+
     }
 
 }
