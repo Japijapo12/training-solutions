@@ -1,4 +1,4 @@
-package week03;
+package week03d05;
 
 
 public class Operation {
@@ -22,4 +22,14 @@ public class Operation {
         return leftOperand + rightOperand;
     }
 
+
+    public static void main(String[] args) {
+        Operation operation = new Operation("68+12");
+        System.out.println(operation.getResult());
+    }
 }
+
+
+//Írj egy Operation osztályt, mely konstruktorban kap egy összeadást, pl. 68+12!
+// A getResult() metódus visszaadja a művelet eredményét.
+// Egy belső leftOperand és rightOperand attribútumba dolgozz!
