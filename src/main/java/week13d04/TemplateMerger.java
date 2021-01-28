@@ -1,44 +1,47 @@
 package week13d04;
 
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 
 public class TemplateMerger {
 
-    List<Employee> employeesData = new ArrayList<>();
-
     public String merge(Path file, List<Employee> employees) {
 
-        try(BufferedReader reader = Files.newBufferedReader(file)) {
-            String line;
-            while (( line = reader.readLine()) != null){
-                String linePart = line.replace("Az alkalmazott neve: ","");
-                String linePart2 = linePart.replace(" születési éve: ","" );
+        try {
+            StringBuilder sb = new StringBuilder();
+            String line = Files.readString(file);
 
-                //ez maradt már csak: John Doe,1980
-                String[] employeesParts = linePart2.split(",");
-                Employee employee = new Employee(employeesParts[0], employeesParts[1]);
-                employeesData.add(employee);
+
+            for (Employee employee : employees) {
+            //    System.out.println(line);
+                String replaced = line.replace("{nev}", employee.getName());
+                replaced = replaced.replace("{ev}", Integer.toString(employee.getYearOfBirth()));
+                sb.append(replaced).append("\n");
 
             }
+            return sb.toString();
         }
-        catch (IOException e) {
-            throw new IllegalStateException("Can not read file", e);
-        }
-
-        for (Employee employee : employeesData) {
-            return employeesData.toString();
+        catch (IOException ioe) {
+            throw new IllegalStateException("Can not read file", ioe);
         }
 
     }
 
-    public List<Employee> getEmployeesData() {
-        return employeesData;
+
+    public static void main(String[] args) {
+        Path path = Path.of("employee-template.txt");
+
+        List<Employee> employees =
+                List.of(
+                        new Employee("John Doe", 1980),
+                        new Employee("Jack Doe", 1980)
+                );
+        String result = new TemplateMerger().merge(path, employees);
+        System.out.println(result);
+
     }
 }
 
@@ -46,3 +49,5 @@ public class TemplateMerger {
 
 
 //Az alkalmazott neve: {nev}, születési éve: {ev}
+
+//Olyan, minta Word körlevél
