@@ -3,9 +3,9 @@ package week13d04;
 public class Employee {
 
    private String name;
-   private String yearOfBirth;
+   private int yearOfBirth;
 
-    public Employee(String name, String yearOfBirth) {
+    public Employee(String name, int yearOfBirth) {
         this.name = name;
         this.yearOfBirth = yearOfBirth;
     }
@@ -14,12 +14,9 @@ public class Employee {
         return name;
     }
 
-    public String getYearOfBirth() {
+    public int getYearOfBirth() {
         return yearOfBirth;
     }
 
-    @Override
-    public String toString() {
-        return "Az alkalmazott neve: " + name + ", " + "születési éve: " + yearOfBirth;
-    }
+
 }
