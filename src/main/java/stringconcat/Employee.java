@@ -11,7 +11,7 @@ public class Employee {
             throw new IllegalArgumentException("Name can not be empty");
         }
 
-        if ( isEmpty(profession) {
+        if ( isEmpty(profession)) {
             throw new IllegalArgumentException("Profession can not be empty");
         }
 
