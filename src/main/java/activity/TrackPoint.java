@@ -14,10 +14,6 @@ public class TrackPoint {
         return coordinate;
     }
 
-    public double getElevation() {
-        return elevation;
-    }
-
 
 
     public double getDistanceFrom(TrackPoint point) {
@@ -47,7 +43,20 @@ public class TrackPoint {
 
 
 
+    public boolean higherThan(TrackPoint anotherTrackPoint) {
+        return elevation > anotherTrackPoint.getElevation();
+    }
 
+    public double elevationDifference(TrackPoint anotherTrackPoint) {
+        return  Math.abs(anotherTrackPoint.elevation - elevation);
 
     }
+
+    public double getElevation() {
+        return elevation;
+    }
+
+
+
+}
 
