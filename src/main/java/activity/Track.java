@@ -91,10 +91,19 @@ public class Track {
 
     }
 
+    public double getDistance() {
+        double sum = 0;
+        TrackPoint prev = trackPoints.get(0);
+        for ( TrackPoint actual : trackPoints) {
+            sum += prev.getDistanceFrom(actual);
+            prev = actual;
+        }
+        return sum;
+    }
+
     public List<TrackPoint> getTrackPoints() {
         return trackPoints;
     }
-
 
 }
 
