@@ -17,4 +17,11 @@ public class ActivityWithoutTrack implements Activity {
     public ActivityType getType() {
         return activityType;
     }
+
+    /* nem kell, mert az Activity interfészben defaulttá tettük
+    return false -val
+    @Override
+       public boolean hasTrack() {
+        return false;
+    }  */
 }
