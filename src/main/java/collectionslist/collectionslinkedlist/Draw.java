@@ -15,7 +15,7 @@ public class Draw {
         return numbers;
     }
 
-    public Set<Integer> drawNumbers(int drawCount, int maxNumber) {
+    public Set<Integer> drawNumbers(int drawCount, int maxNumber) throws IllegalArgumentException {
         if (maxNumber <= drawCount) {
             throw new IllegalArgumentException("drawCount must be less then " + maxNumber + "!");
         }
