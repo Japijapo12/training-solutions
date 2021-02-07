@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class LetterCounter {
 
-    public Map<String, Integer> countLetter(String word) {
+    public int countLetter(String word) {
         Map<String, Integer> abc = new HashMap<>();
 
         String[] letters = word.toLowerCase().split("");
@@ -20,7 +20,7 @@ public class LetterCounter {
             }
 
         }
-        return abc;
+        return abc.size();
     }
 
 
