@@ -42,3 +42,9 @@ public class PostFinder {
 
 
 }
+
+//Implementáljunk a PostFinder osztályban egy public List<Post> findPostsFor(String user) metódust az alábbi módon:
+//- Csak olyan Post-ot adjunk vissza, amelynek az owner-e megegyezik a megadott user-rel
+//- A Post publishedAt dátuma korábbi kell, hogy legyen, mint a LocalDate.now()
+//- A content és a title nem lehet üres
+//Tároljunk egy List<Post> objektumot a PostFinder osztályban, melyet konstruktor paraméterként kap meg és ezt használjuk!
