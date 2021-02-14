@@ -3,7 +3,7 @@ package exam02.cv;
 public class Skill {
 
     private String name;
-    private int level;
+    private final int level;
 
     public Skill(String name, int level) {
        if (level < 1 || level >5) {
@@ -21,5 +21,8 @@ public class Skill {
         return level;
     }
 
-
+    @Override
+    public String toString() {
+        return name + " (" + level + ")";
+    }
 }
