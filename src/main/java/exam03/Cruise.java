@@ -55,7 +55,7 @@ public class Cruise {
             }
 
         }
-        throw new IllegalStateException("No airplain found with this name:" + name);
+        throw new IllegalStateException("No passenger found with this name:" + name);
     }
 
 
