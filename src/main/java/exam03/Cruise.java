@@ -34,15 +34,19 @@ public class Cruise {
     }
 
 
-
-
     public void bookPassenger(Passenger passenger) {
-        if(passengers.size() > boat.getMaxPassengers()) {
+        if (passengers.size() > boat.getMaxPassengers()) {
             throw new IllegalArgumentException("Nincs több hely a hajóra");
-        }
-        else {
-             passengers.add(passenger);
-            }
+        } else {
+            passengers.add(passenger);
         }
     }
+
+    public double getPriceForPassenger(Passenger passenger) {
+
+        return basicPrice * passenger.getCruiseClass().getBoatPrice();
+
+
+    }
+}
 
