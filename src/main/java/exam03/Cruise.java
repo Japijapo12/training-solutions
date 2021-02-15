@@ -1,9 +1,7 @@
 package exam03;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Cruise {
 
@@ -78,6 +76,21 @@ public class Cruise {
             sum += getPriceForPassenger(passenger);
         }
         return sum;
+    }
+
+    public Map<CruiseClass, Integer> countPassengerByClass() {
+        Map<CruiseClass, Integer> result = new HashMap<>();
+
+        for(Passenger passenger : passengers) {
+            Integer prevValue = result.get(passenger.getCruiseClass());
+            if (prevValue == null) {
+                result.put(passenger.getCruiseClass(), 1);
+            } else {
+                result.put(passenger.getCruiseClass(), prevValue + 1);
+            }
+        }
+        return result;
+
     }
 
 
