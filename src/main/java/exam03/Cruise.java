@@ -46,7 +46,18 @@ public class Cruise {
 
         return basicPrice * passenger.getCruiseClass().getBoatPrice();
 
-
     }
+
+    public Passenger findPassengerByName(String name) {
+        for(Passenger passenger : passengers) {
+            if (passenger.getName().equals(name)) {
+                return passenger;
+            }
+
+        }
+        throw new IllegalStateException("No airplain found with this name:" + name);
+    }
+
+
 }
 
