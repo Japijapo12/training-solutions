@@ -2,6 +2,7 @@ package exam03;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Cruise {
@@ -56,6 +57,18 @@ public class Cruise {
 
         }
         throw new IllegalStateException("No passenger found with this name:" + name);
+    }
+
+    public List<String> getPassengerNamesOrdered() {
+        List<String> names = new ArrayList<>();
+        for (Passenger passenger : passengers) {
+            String name = passenger.getName();
+            names.add(name);
+
+
+        }
+        Collections.sort(names);
+        return names;
     }
 
 
