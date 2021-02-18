@@ -1,4 +1,4 @@
-package defaultconstrutor;
+package defaultconstructor;
 
 public class SimpleDateFormatter {
 
