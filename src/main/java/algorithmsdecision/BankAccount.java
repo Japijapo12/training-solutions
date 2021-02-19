@@ -28,12 +28,17 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public int withdraw(int amount) {
-        return balance + amount;
+    public boolean withdraw(int amount) {
+        if (amount <= balance) {
+            balance = balance - amount;
+            return true
+        }
+        return false;
     }
 
-    public int deposit(int amount) {
-        return balance - amount;
+    public boolean deposit(int amount) {
+        balance = balance + amount;
+        return true;
     }
 
 
