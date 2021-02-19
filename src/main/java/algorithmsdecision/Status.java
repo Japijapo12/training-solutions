@@ -1,5 +1,5 @@
 package algorithmsdecision;
 
 public enum Status {
-    CREATED, SUCCEDED, PENDING
+    CREATED, SUCCEEDED, PENDING
 }
