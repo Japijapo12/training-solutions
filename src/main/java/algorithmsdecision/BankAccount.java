@@ -31,7 +31,7 @@ public class BankAccount {
     public boolean withdraw(int amount) {
         if (amount <= balance) {
             balance = balance - amount;
-            return true
+            return true;
         }
         return false;
     }
