@@ -26,3 +26,14 @@ public class Library {
         return books;
     }
 }
+
+
+/*Egy könyvtár nyilvántartása a könyvek leltári számát, szerzőjét, címét és a kiadás évét
+tartalmazza. Készíts egy Book osztályt, mely konstruktorában megkapja ezeket az
+adatokat! Minden adata lekérdezhető, de egyik sem módosítható. A Library osztály
+attribútumként egy List<Book>-ot tartalmaz. A loadFromFile() metódusa a classpathon
+található books.csv fájlból tölti be a könyvek adatait. A fájl minden sora egy könyv
+adatait tartalmazza pontosvesszővel elválasztva.
+Tipp: Könnyebb a fájl olvasása, ha mind a ;-t, mind a sorvége karaktert beállítod a
+Scanner elválasztójaként. Ehhez használd delimiterként a ";|(\r\n)" kifejezést!
+ */
