@@ -1,4 +1,4 @@
-package controladvanded.duplicates;
+package controladvanced.duplicates;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,11 @@ public class Duplicates {
     }
 }
 
+/*Szűrd ki egy List<Integer> listában a többször szereplő elemeket, és add vissza.
 
+Több megoldás elképzelhető, egyik (nem hatékony) megoldás, hogy egy ciklusban
+végigmész az elemeken, majd egy másik ciklusban pedig végigmész az összes elem előtt
+lévő elemen. Ha egyezőséget találsz, átteszed az elemet egy másik listába, és szakítsd
+meg a belső ciklust, különben ha egy elem háromszor ismétlődik, rosszul fog működni.
 
-
-//Szűrd ki egy List<Integer> listában a többször szereplő elemeket, és add vissza.
+*/
