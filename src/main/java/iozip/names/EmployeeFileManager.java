@@ -23,3 +23,10 @@ public class EmployeeFileManager {
         }
     }
 }
+
+/*
+Az iozip.names csomagba készíts egy EmployeeFileManager osztályt! Egyetlen
+metódusa van, a saveEmployees(), mely a paraméterként kapott Path által reprezentált
+zip fájlba létrehoz egy names.dat nevű bináris fájlt, és a szintén paraméterként kapott
+névlista tartalmát beleírja.
+ */
