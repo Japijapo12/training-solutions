@@ -1,4 +1,4 @@
-package controladvanded.cars;
+package controladvanced.cars;
 
 import org.junit.jupiter.api.Test;
 
