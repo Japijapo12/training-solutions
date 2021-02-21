@@ -13,7 +13,7 @@ public class EmployeeFileManager {
     public void saveEmployees(Path file, List<String> employees) {
 
         try(ZipOutputStream outputStream = new ZipOutputStream(new BufferedOutputStream((Files.newOutputStream(file))))) {
-            outputStream.putNextEntry((new ZipEntry("names.dat")));
+            outputStream.putNextEntry(new ZipEntry("names.dat"));
             for(String name : employees) {
                 outputStream.write(name.getBytes());
             }
