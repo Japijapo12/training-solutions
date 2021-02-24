@@ -15,7 +15,7 @@ public class OwlCounter {
         String line;
         try {
             while ((line = reader.readLine()) != null) {
-                System.out.println("line" + line);
+
                 String[] parts = line.split("=");
                 String county = parts[0];
                 Integer owlSum = Integer.parseInt(parts[1]);
