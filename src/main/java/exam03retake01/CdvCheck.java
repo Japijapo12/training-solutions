@@ -4,8 +4,7 @@ public class CdvCheck {
 
     public boolean check(String digits) {
 
-
-        if (digits.length() != 10) {
+        if (digits.length() != 10 || notNumber(digits)) {
             throw new IllegalArgumentException("Az adószámnak 10 számjegyűnek kell lennie!");
         }
 
@@ -17,6 +16,17 @@ public class CdvCheck {
         System.out.println(sum);
 
         return (sum % 11) == Integer.parseInt(digits.substring(9));
+    }
+
+//az integer tartományba nem fér bele a 10 jegyű adószám, csak a long-ba!
+    private boolean notNumber(String s) {
+        try {
+            Long.parseLong(s);
+            return false;
+        }
+        catch (NumberFormatException ne) {
+            return true;
+        }
     }
 }
 
