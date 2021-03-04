@@ -1,4 +1,4 @@
-package week04;
+package week04d03;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -36,3 +36,11 @@ public class GuessTheNumber {
 
     }
 }
+
+
+/*
+Írj egy számkitaláló programot a GuessTheNumber osztályba! A program kitalál egy véletlenszerű számot 1 és 100 között.
+Majd bekér a felhasználótól ciklusban számokat. Mindig megmondja, hogy a szám, kisebb, nagyobb vagy egyenlő-e mint a gondolt szám.
+
+Bónusz feladat: max 6-szor lehet kérdezni!
+ */
