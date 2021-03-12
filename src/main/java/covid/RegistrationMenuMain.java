@@ -4,7 +4,8 @@ import org.mariadb.jdbc.MariaDbDataSource;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
@@ -20,11 +21,9 @@ public class RegistrationMenuMain {
     private static final String MENU = "1. Regisztráció\n2. Tömeges regisztráció";
 
 
+
     public static void main(String[] args) {
         RegistrationMenuMain registrationMenuMain = new RegistrationMenuMain();
-
-
-
 
         //Flyway flyway = Flyway.configure().dataSource(dataSource).load();
         //flyway.clean();
@@ -100,7 +99,7 @@ public class RegistrationMenuMain {
 
         private void massRegistration() {
 
-        MariaDbDataSource dataSource;
+            MariaDbDataSource dataSource;
             try {
                 dataSource = new MariaDbDataSource();
                 dataSource.setUrl("jdbc:mariadb://localhost:3306/covid?useUnicode=true");
@@ -112,13 +111,10 @@ public class RegistrationMenuMain {
 
         System.out.println("Adja meg a tömeges regisztrációhoz a fájl nevét!");
             String fileName = scanner.nextLine();
-            try(BufferedReader reader = new BufferedReader(new InputStreamReader(RegistrationMenuMain.class.getResourceAsStream(fileName)))) {
-                System.out.println(reader);
-
+            try(BufferedReader reader = new BufferedReader(Files.newBufferedReader(Path.of("idosotthon.csv")))) {
                 FileManager fileManager = new FileManager();
+                List<Citizen> citizens = fileManager.loadCitizenList(reader);
                 CitizenDao citizenDao = new CitizenDao(dataSource);
-
-                List<Citizen> citizens = fileManager.loadCitizenList(reader) ;
                 citizenDao.insertCitizens(citizens);
 
         } catch (IOException e) {
