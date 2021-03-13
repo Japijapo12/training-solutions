@@ -57,5 +57,19 @@ public class Citizen {
     public LocalDate getLastVaccination() {
         return lastVaccination;
     }
+
+
+    @Override
+    public String toString() {
+        return "Citizen: " +
+                "name='" + name + '\'' +
+                ", zip='" + zip + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", taj='" + taj + '\'' +
+                ", numberOfVaccination=" + numberOfVaccination +
+                ", lastVaccination=" + lastVaccination +
+                '}';
+    }
 }
 
