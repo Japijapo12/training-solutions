@@ -7,14 +7,14 @@ public class Transaction {
     private String accountNumber;
     private TransactionOperation transactionOperation; //DEBIT vagy CREDIT
     private int amount;
-    private LocalDateTime dateOfTransacion;
+    private LocalDateTime dateOfTransaction;
     private Status status;
 
-    public Transaction(String accountNumber, TransactionOperation transactionOperation, int amount, LocalDateTime dateOfTransacion, Status status) {
+    public Transaction(String accountNumber, TransactionOperation transactionOperation, int amount, LocalDateTime dateOfTransaction, Status status) {
         this.accountNumber = accountNumber;
         this.transactionOperation = transactionOperation;
         this.amount = amount;
-        this.dateOfTransacion = dateOfTransacion;
+        this.dateOfTransaction = dateOfTransaction;
         this.status = status;
     }
 
@@ -26,8 +26,8 @@ public class Transaction {
         return amount;
     }
 
-    public LocalDateTime getDateOfTransacion() {
-        return dateOfTransacion;
+    public LocalDateTime getDateOfTransaction() {
+        return dateOfTransaction;
     }
 
     public boolean isDebit() {
@@ -37,6 +37,7 @@ public class Transaction {
     public boolean isCredit() {
         return transactionOperation == TransactionOperation.CREDIT;
     }
+
 
     public void setExecutedSuccessfully(){
         status = Status.SUCCEEDED;
