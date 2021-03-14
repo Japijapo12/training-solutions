@@ -8,8 +8,8 @@ public class TransactionDecisionMaker {
     public boolean containsCreditEntryGreaterThan(List<Transaction> transactions, LocalDateTime start, LocalDateTime end, int minAmount) {
         for (Transaction transaction : transactions) {
             if (transaction.isDebit()
-                    && transaction.getDateOfTransacion().isAfter(start)
-                    && transaction.getDateOfTransacion().isBefore(end)
+                    && transaction.getDateOfTransaction().isAfter(start)
+                    && transaction.getDateOfTransaction().isBefore(end)
                     && transaction.getAmount() > minAmount) {
                 return true;
             }
