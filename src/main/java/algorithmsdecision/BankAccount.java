@@ -28,7 +28,7 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public boolean withdraw(int amount) {
+    public boolean withdraw(int amount) {   //kivét
         if (amount <= balance) {
             balance = balance - amount;
             return true;
